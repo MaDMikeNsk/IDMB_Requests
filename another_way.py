@@ -10,5 +10,7 @@ headers = {
     }
 
 response = requests.get(url, headers=headers, params=querystring).json()
+print(f"Number of films: {len(response['Search'])}")
+print('**************')
 for item in response['Search']:
-    print(item)
+    print(item['Title'])

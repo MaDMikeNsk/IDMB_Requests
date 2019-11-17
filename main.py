@@ -2,7 +2,10 @@ from Idmb_requests import IMDb
 
 session = IMDb()
 
-movies = session.get_movies_by_title('Avengers')
+session.is_actor_in_movie('Jesse Eisenberg', 'The Social Network')
 
-if movies:
-    print(movies)
+session.is_actor_in_movie('Jim Carrey', 'The Truman Show')
+
+
+
+# 'Jesse Eisenberg'

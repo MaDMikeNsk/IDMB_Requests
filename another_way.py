@@ -2,7 +2,7 @@ import requests
 
 url = "https://movie-database-imdb-alternative.p.rapidapi.com/"
 
-querystring = {"r": "json", "s": "Avengers"}
+querystring = {"i": "tt2455546", "r": "json"}
 
 headers = {
     'x-rapidapi-host': "movie-database-imdb-alternative.p.rapidapi.com",
@@ -10,7 +10,4 @@ headers = {
     }
 
 response = requests.get(url, headers=headers, params=querystring).json()
-print(f"Number of films: {len(response['Search'])}")
-print('**************')
-for item in response['Search']:
-    print(item['Title'])
+print(response)
